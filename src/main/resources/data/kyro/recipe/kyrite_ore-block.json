@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "kyro:kyrite_ore_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "kyro:kyrite_ore"
+  }
+}

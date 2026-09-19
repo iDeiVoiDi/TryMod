@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 900,
+  "experience": 30,
+  "group": "kyrite_ore",
+  "ingredient": {
+    "item": "kyro:raw_kyrite_block"
+  },
+  "result": {
+    "count": 1,
+    "id": "kyro:kyrite_ore_block"
+  }
+}

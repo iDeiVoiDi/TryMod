@@ -1,5 +1,10 @@
 package com.ideivoidi.kyro;
 
+import com.ideivoidi.kyro.block.ModBlocks;
+import com.ideivoidi.kyro.item.ModCreativeModeTabs;
+import com.ideivoidi.kyro.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -17,7 +22,7 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(Kyro.MOD_ID)
 public class Kyro {
-    public static final String MOD_ID = "ideivoidismod";
+    public static final String MOD_ID = "kyro";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
@@ -30,6 +35,11 @@ public class Kyro {
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -44,7 +54,17 @@ public class Kyro {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.KYRITE_INGOT);
+            event.accept(ModItems.RAW_KYRITE);
+            event.accept(ModItems.KYRITE_ORE);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.KYRITE_INGOT_BLOCK);
+            event.accept(ModBlocks.ENDSTONE_KYRITE_ORE_BLOCK);
+            event.accept(ModBlocks.RAW_KYRITE_BLOCK);
+            event.accept(ModBlocks.KYRITE_ORE_BLOCK);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

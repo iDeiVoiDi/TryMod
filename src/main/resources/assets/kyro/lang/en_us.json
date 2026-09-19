@@ -1,0 +1,12 @@
+{
+  "item.kyro.kyrite_ingot": "Kyrite ingot",
+  "item.kyro.raw_kyrite": "Raw Kyrite",
+  "item.kyro.kyrite_ore": "kyrite Ore",
+
+  "block.kyro.kyrite_ingot_block": "Kyrite ingot block",
+  "block.kyro.kyrite_ore_block": "Kyrite ore block",
+  "block.kyro.endstone_kyrite_ore_block": "Kyrite ore",
+  "block.kyro.raw_kyrite_block": "Raw Kyrite block",
+
+  "creativetab.kyro.kyrite_items": "Kyrite Items"
+}

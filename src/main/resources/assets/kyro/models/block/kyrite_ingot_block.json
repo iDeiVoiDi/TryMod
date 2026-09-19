@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "kyro:block/kyrite_ingot_block"
+  }
+}

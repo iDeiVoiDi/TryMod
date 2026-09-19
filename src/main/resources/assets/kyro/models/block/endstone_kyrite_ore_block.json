@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "kyro:block/endstone_kyrite_ore_block"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "kyro:raw_kyrite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "kyro:raw_kyrite"
+  }
+}
