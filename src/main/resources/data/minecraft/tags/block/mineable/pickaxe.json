@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "kyro:endstone_kyrite_ore_block",
+    "kyro:kyrite_ingot_block",
+    "kyro:kyrite_ore_block",
+    "kyro:raw_kyrite_block"
+  ]
+}
